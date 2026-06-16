@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasty Bites Restaurant</title>
+<link rel="stylesheet" href="FastFood.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Tasty Bites Restaurant</h1>
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="call-btn">
+        <i class="fa-solid fa-phone"></i>
+        071 476 7516
+    </button>
+</header>
+
+<section class="hero">
+
+    <div class="hero-text">
+        <h2>Good Food</h2>
+        <h1>GOOD MOOD</h1>
+
+        <p>
+            Welcome to Tasty Bites Restaurant.
+            We serve delicious meals prepared
+            with fresh ingredients.
+        </p>
+
+        <button>View Menu</button>
+        <button>Order Now</button>
+    </div>
+
+</section>
+
+<section class="content-grid">
+
+    <div class="special-card">
+        <h2>Today's Special</h2>
+
+        <img src="Chicken.WEBP" alt="Special">
+
+        <h3>Grilled Chicken & Chips</h3>
+
+        <p class="price">R99</p>
+
+        <button>View Special</button>
+    </div>
+
+    <div class="order-card">
+
+        <h2>Order Your Food</h2>
+
+        <input type="text"
+        id="name"
+        placeholder="Your Name">
+
+        <input type="text"
+        id="phone"
+        placeholder="Phone Number">
+
+        <textarea
+        id="address"
+        placeholder="Delivery Address">
+        </textarea>
+
+        <select id="food">
+            <option>Burger & Chips</option>
+            <option>Pizza</option>
+            <option>Grilled Chicken</option>
+            <option>Cold Drink</option>
+        </select>
+
+        <button onclick="sendOrder()">
+            Order via WhatsApp
+        </button>
+
+    </div>
+
+    <div class="calculator-card">
+
+        <h2>Bill Calculator</h2>
+
+        <input type="number"
+        id="qty"
+        placeholder="Quantity">
+
+        <button onclick="calculateTotal()">
+            Calculate Total
+        </button>
+
+        <p id="billOutput"></p>
+
+    </div>
+
+</section>
+
+
+<section class="features">
+
+<div class="feature-box">
+<i class="fa-solid fa-motorcycle"></i>
+<h3>Fast Delivery</h3>
+<p>Fresh food delivered quickly.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-award"></i>
+<h3>Best Quality</h3>
+<p>Premium ingredients every day.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-wallet"></i>
+<h3>Secure Payments</h3>
+<p>Safe and secure transactions.</p>
+</div>
+
+</section>
+
+
+
+<section id="contact" class="contact-card">
+
+    <h2>Contact Us</h2>
+
+    <form id="contactForm">
+
+        <input type="text"
+        id="customerName"
+        placeholder="Your Name">
+
+        <input type="email"
+        id="email"
+        placeholder="Your Email">
+
+        <textarea id="message"
+        placeholder="Your Message">
+        </textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+    <p id="result"></p>
+
+</section>
+
+<footer>
+    <p>© 2026 Tasty Bites Restaurant</p>
+
+    <div class="socials">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+    </div>
+</footer>
+
+<script src="FastFood.js"></script>
+
+</body>
+</html>
