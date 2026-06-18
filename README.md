@@ -43,9 +43,11 @@ This is a responsive restaurant website created using HTML, CSS, and JavaScript.
 
 ## Author
 
-Created by: Lefa Junior && Tumelo 
+Created by: Lefa mamba && Tumelo Mkgotho
 
 ## Contact
 
 Email: [lefajunior221@gmail.com](mailto:lefajunior221@gmail.com)
-Phone: +27 71 476 7516
+       [mokgothotumelo79@gmail.com](mailto:mokgothotumelo79@gmail.com)
+      
+Phone: +27 71 476 7516 / +27 67 366 6047
