@@ -1,160 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tasty Bites Restaurant</title>
-<link rel="stylesheet" href="FastFood.css">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Tasty Bites Restaurant</title>
+    <link rel="stylesheet" href="FastFood.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
 <header>
     <div class="logo">
         <h1>Tasty Bites Restaurant</h1>
     </div>
-
     <nav>
         <a href="Home.html">Home</a>
         <a href="Menu.html">Menu</a>
         <a href="About.html">About</a>
         <a href="Contacts.html">Contact</a>
-
     </nav>
-
     <button class="call-btn">
-        <i class="fa-solid fa-phone"></i>
-        071 476 7516
+        <i class="fa-solid fa-phone"></i> 071 476 7516
     </button>
 </header>
 
 <section class="hero">
-
     <div class="hero-text">
         <h2>Good Food</h2>
         <h1>GOOD MOOD</h1>
-
-        <p>
-            Welcome to Tasty Bites Restaurant.
-            We serve delicious meals prepared
-            with fresh ingredients.
-        </p>
+        <p>Welcome to Tasty Bites Restaurant. We serve delicious meals prepared with fresh ingredients.</p>
     </div>
-
 </section>
-
-
 
 <section class="features">
-
-<div class="feature-box">
-<i class="fa-solid fa-motorcycle"></i>
-<h3>Fast Delivery</h3>
-<p>Fresh food delivered quickly.</p>
-</div>
-
-<div class="feature-box">
-<i class="fa-solid fa-award"></i>
-<h3>Best Quality</h3>
-<p>Premium ingredients every day.</p>
-</div>
-
-<div class="feature-box">
-<i class="fa-solid fa-wallet"></i>
-<h3>Secure Payments</h3>
-<p>Safe and secure transactions.</p>
-</div>
-
+    <div class="feature-box">
+        <i class="fa-solid fa-motorcycle"></i>
+        <h3>Fast Delivery</h3>
+        <p>Fresh food delivered quickly.</p>
+    </div>
+    <div class="feature-box">
+        <i class="fa-solid fa-award"></i>
+        <h3>Best Quality</h3>
+        <p>Premium ingredients every day.</p>
+    </div>
+    <div class="feature-box">
+        <i class="fa-solid fa-wallet"></i>
+        <h3>Secure Payments</h3>
+        <p>Safe and secure transactions.</p>
+    </div>
 </section>
 
-
 <section class="stats">
-    <div>
+    <div class="stat-box">
         <h2>10K+</h2>
         <p>Happy Customers</p>
     </div>
-
-    <div>
+    <div class="stat-box">
         <h2>500+</h2>
         <p>Dishes Served Daily</p>
     </div>
-
-    <div>
+    <div class="stat-box">
         <h2>5★</h2>
         <p>Customer Rating</p>
     </div>
 </section>
 
-
+<!-- Reviews Section -->
 <section class="reviews">
     <h2>Rate Your Experience</h2>
+    <div class="average-rating" id="averageRating">
+        <div class="stars-display">
+            <span class="star-empty">☆☆☆☆☆</span>
+            <span class="average-score">0.0</span>
+        </div>
+        <span class="review-count">(0 reviews)</span>
+    </div>
 
     <form id="reviewForm">
-
-        <input type="text"
-               id="customerName"
-               placeholder="Your Name"
-               required>
-
-        <select id="rating" required>
-            <option value="">Choose Rating</option>
-            <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ Excellent</option>
-            <option value="⭐⭐⭐⭐">⭐⭐⭐⭐ Very Good</option>
-            <option value="⭐⭐⭐">⭐⭐⭐ Good</option>
-            <option value="⭐⭐">⭐⭐ Fair</option>
-            <option value="⭐">⭐ Poor</option>
-        </select>
-
-        <textarea id="reviewText"
-                  placeholder="Write your review..."
-                  required></textarea>
-
-        <button type="submit">Submit Review</button>
-
+        <div class="form-group">
+            <label for="customerName">Your Name</label>
+            <input type="text" id="customerName" placeholder="e.g., Tumelo" required>
+        </div>
+        <div class="form-group">
+            <label>Your Rating</label>
+            <div class="star-rating">
+                <i class="fa-regular fa-star" data-value="1"></i>
+                <i class="fa-regular fa-star" data-value="2"></i>
+                <i class="fa-regular fa-star" data-value="3"></i>
+                <i class="fa-regular fa-star" data-value="4"></i>
+                <i class="fa-regular fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" id="ratingValue" value="0" required>
+            <span class="rating-text" id="ratingText">Select a rating</span>
+        </div>
+        <div class="form-group">
+            <label for="reviewText">Your Review</label>
+            <textarea id="reviewText" placeholder="Share your dining experience..." rows="4" maxlength="500" required></textarea>
+            <div class="char-counter"><span id="charCount">0</span> / 500 characters</div>
+        </div>
+        <button type="submit" id="submitBtn"><i class="fa-regular fa-paper-plane"></i> Submit Review</button>
     </form>
 
+    <div id="successMessage" class="hidden">
+        <i class="fa-regular fa-circle-check"></i>
+        <p>Thank you for your review! </p>
+    </div>
     <div id="reviewsContainer"></div>
 </section>
 
 
 <footer>
-
-
-      <div class="footer-section">
-          <h3>Tasty Bites Restaurant</h3>
-          <p>Your trusted guide for maps, routes and places.</p>
-      </div>
-
-      <div class="footer-section">
-          <h3>Quick Links</h3>
-          <a href="#">Home</a>
-          <a href="Contacts.html">Maps</a>
-          <a href="About.html">About</a>
-      </div>
-
-      <div class="footer-section">
-          <h3>Support</h3>
-          <a href="#">Help Center</a>
-          <a href="#">FAQs</a>
-          <a href="#">Report Issue</a>
-      </div>
-
-      <div class="footer-section">
-          <h3>Follow/contact Us</h3>
-          <div class="socials">
-              <i class="fa-brands fa-facebook"></i><p>Facebook </p>
-              <i class="fa-brands fa-instagram"></i><p>Instagram  </p>
-              <i class="fa-brands fa-whatsapp"></i><p>WattsApp </p>
-          </div>
-      </div>
-
-        <p class="paragraph_footer">© 2026 Tasty Bites Restaurant</p>
-
-  </footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Tasty Bites Restaurant</h3>
+            <p>Serving delicious meals made with fresh, locally-sourced ingredients since 2010.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="Home.html">Home</a>
+            <a href="Menu.html">Menu</a>
+            <a href="About.html">About Us</a>
+        </div>
+        <div class="footer-section">
+            <h3>Support</h3>
+            <a href="#">Help Center</a>
+            <a href="#">FAQs</a>
+            <a href="#">Report Issue</a>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-phone"></i> 071 476 7516</p>
+            <p><i class="fas fa-envelope"></i> info@tastybites.com</p>
+            <div class="socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+    <hr class="footer-divider">
+    <p class="paragraph_footer">© 2026 Tasty Bites Restaurant. All Rights Reserved.</p>
+</footer>
 
 <script src="FastFood.js"></script>
-
 </body>
 </html>

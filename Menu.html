@@ -1,197 +1,165 @@
+<!-- Menu.html - Updated Version -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tasty Bites Restaurant</title>
-<link rel="stylesheet" href="FastFood.css">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Tasty Bites Restaurant - Menu</title>
+    <link rel="stylesheet" href="FastFood.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
 <header>
     <div class="logo">
         <h1>Tasty Bites Restaurant</h1>
     </div>
-
     <nav>
         <a href="Home.html">Home</a>
         <a href="Menu.html">Menu</a>
         <a href="About.html">About</a>
         <a href="Contacts.html">Contact</a>
-
     </nav>
-
     <button class="call-btn">
-        <i class="fa-solid fa-phone"></i>
-        071 476 7516
+        <i class="fa-solid fa-phone"></i> 071 476 7516
     </button>
-	</header>
+</header>
 
-  <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search our menu...">
-  </div>
-
-  <section class="menu-grid">
-
-      <a href="burgers.html" class="menu-card large">
-          <img src="Burger.WEBP" alt="Burgers">
-          <div class="overlay">
-              <h2>BURGERS</h2>
-          </div>
-      </a>
-
-      <a href="pizzas.html" class="menu-card">
-          <img src="pizza.jpg" alt="Pizza">
-          <div class="overlay">
-              <h2>PIZZAS</h2>
-          </div>
-      </a>
-
-      <a href="drinks.html" class="menu-card">
-          <img src="Chicken.WEBP" alt="Chicken">
-          <div class="overlay">
-              <h2>DRINKS</h2>
-          </div>
-      </a>
-
-      <a href="pies.html" class="menu-card">
-          <img src="pie.WEBP" alt="Pies">
-          <div class="overlay">
-              <h2>PIES</h2>
-          </div>
-      </a>
-
-  </section>
-
-
-
-
-
-
-	<section class="content-grid">
-
-    <div class="special-card">
-        <h2>Today's Special</h2>
-
-        <img src="Chicken.WEBP" alt="Special">
-
-        <h3>Grilled Chicken & Chips</h3>
-
-        <p class="price">R99</p>
-
-        <button>View Special</button>
+<!-- Category Cards -->
+<section class="menu-categories">
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search our menu...">
     </div>
-
-    <div class="order-card">
-
-        <h2>Order Your Food</h2>
-
-        <input type="text"
-        id="name"
-        placeholder="Your Name">
-
-        <input type="text"
-        id="phone"
-        placeholder="Phone Number">
-
-        <textarea
-        id="address"
-        placeholder="Delivery Address">
-        </textarea>
-
-        <select id="food">
-            <option>Burger & Chips</option>
-            <option>Pizza</option>
-            <option>Grilled Chicken</option>
-            <option>Pie</option>
-        </select>
-
-        <button onclick="sendOrder()">
-            Order via WhatsApp
-        </button>
-
-    </div>
-
-    <div class="calculator-card">
-
-        <h2>Bill Calculator</h2>
-
-        <input type="number"
-        id="qty"
-        placeholder="Quantity">
-
-        <button onclick="calculateTotal()">
-            Calculate Total
-        </button>
-
-        <p id="billOutput"></p>
-
-    </div>
-
-</section>
-
-
-<section class="features">
-
-<div class="feature-box">
-<i class="fa-solid fa-motorcycle"></i>
-<h3>Fast Delivery</h3>
-<p>Fresh food delivered quickly.</p>
-</div>
-
-<div class="feature-box">
-<i class="fa-solid fa-award"></i>
-<h3>Best Quality</h3>
-<p>Premium ingredients every day.</p>
-</div>
-
-<div class="feature-box">
-<i class="fa-solid fa-wallet"></i>
-<h3>Secure Payments</h3>
-<p>Safe and secure transactions.</p>
-</div>
-
-</section>
-
-<footer>
-    <div class="footer-section">
-        <h3>Tasty Bites Restaurant</h3>
-        <p>Your trusted guide for maps, routes and places.</p>
-    </div>
-
-    <div class="footer-section">
-        <h3>Quick Links</h3>
-        <a href="#">Home</a>
-        <a href="Contacts.html">Maps</a>
-        <a href="About.html">About</a>
-    </div>
-
-    <div class="footer-section">
-        <h3>Support</h3>
-        <a href="#">Help Center</a>
-        <a href="#">FAQs</a>
-        <a href="#">Report Issue</a>
-    </div>
-
-    <div class="footer-section">
-        <h3>Follow/contact Us</h3>
-        <div class="socials">
-            <i class="fa-brands fa-facebook"></i><p>Facebook </p>
-            <i class="fa-brands fa-instagram"></i><p>Instagram  </p>
-            <i class="fa-brands fa-whatsapp"></i><p>WattsApp </p>
+    <div class="category-grid">
+        <div class="category-card active" data-category="all">
+            <i class="fa-solid fa-utensils"></i>
+            <span>All</span>
+        </div>
+        <div class="category-card" data-category="burgers">
+            <i class="fa-solid fa-burger"></i>
+            <span>Burgers</span>
+        </div>
+        <div class="category-card" data-category="pizzas">
+            <i class="fa-solid fa-pizza-slice"></i>
+            <span>Pizzas</span>
+        </div>
+        <div class="category-card" data-category="chicken">
+            <i class="fa-solid fa-drumstick-bite"></i>
+            <span>Chicken</span>
+        </div>
+        <div class="category-card" data-category="pies">
+            <i class="fa-solid fa-cake"></i>
+            <span>Pies</span>
+        </div>
+        <div class="category-card" data-category="drinks">
+            <i class="fa-solid fa-mug-saucer"></i>
+            <span>Drinks</span>
         </div>
     </div>
+</section>
 
-      <p class="paragraph_footer">© 2026 Tasty Bites Restaurant</p>
+<!-- Menu Items Display -->
+<section class="menu-items-container">
+    <h2 id="categoryTitle">All Menu Items</h2>
+    <div class="menu-items-grid" id="menuItemsGrid">
+        <!-- Items will be rendered by JavaScript -->
+    </div>
+</section>
 
+<!-- Order Section -->
+<section class="content-grid">
+   
+    <div class="customer-card">
+        <h2>Customer Details</h2>
+        
+        <div class="customer-info">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <textarea id="address" placeholder="Delivery Address" rows="3"></textarea>
+            <select id="deliveryOption">
+                <option value="delivery">Delivery</option>
+                <option value="collection">Collection</option>
+            </select>
+        </div>
+
+        <button onclick="sendOrder()" class="order-btn">
+            <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+        </button>
+    </div>
+
+    <div class="summary-card">
+        <h2>Order Summary</h2>
+        
+        <!-- Order Items -->
+        <div id="orderItems">
+            <p class="empty-order">No items added yet</p>
+        </div>
+        
+        <!-- Order Total -->
+        <div class="order-total">
+            <span>Total:</span>
+            <span>R<span id="orderTotal">0.00</span></span>
+        </div>
+        
+        <button onclick="clearOrder()" class="clear-btn">
+            <i class="fa-solid fa-trash-can"></i> Clear Order
+        </button>
+    </div>
+</section>
+<!-- Features -->
+<section class="features">
+    <div class="feature-box">
+        <i class="fa-solid fa-motorcycle"></i>
+        <h3>Fast Delivery</h3>
+        <p>Fresh food delivered quickly.</p>
+    </div>
+    <div class="feature-box">
+        <i class="fa-solid fa-award"></i>
+        <h3>Best Quality</h3>
+        <p>Premium ingredients every day.</p>
+    </div>
+    <div class="feature-box">
+        <i class="fa-solid fa-wallet"></i>
+        <h3>Secure Payments</h3>
+        <p>Safe and secure transactions.</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Tasty Bites Restaurant</h3>
+            <p>Serving delicious meals made with fresh, locally-sourced ingredients since 2010.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="Home.html">Home</a>
+            <a href="Menu.html">Menu</a>
+            <a href="About.html">About Us</a>
+        </div>
+        <div class="footer-section">
+            <h3>Support</h3>
+            <a href="#">Help Center</a>
+            <a href="#">FAQs</a>
+            <a href="#">Report Issue</a>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-phone"></i> 071 476 7516</p>
+            <p><i class="fas fa-envelope"></i> info@tastybites.com</p>
+            <div class="socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+    <hr class="footer-divider">
+    <p class="paragraph_footer">2026 Tasty Bites Restaurant. All Rights Reserved.</p>
 </footer>
 
-<script src="SearchFunction.js"></script>
-
+<script src="MenuManager.js"></script>
 <script src="FastFood.js"></script>
-
 </body>
 </html>
