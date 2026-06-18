@@ -15,7 +15,7 @@
         <h1>Tasty Bites Restaurant</h1>
     </div>
     <nav>
-        <a href="Home.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="Menu.html">Menu</a>
         <a href="About.html">About</a>
         <a href="Contacts.html">Contact</a>
@@ -68,10 +68,10 @@
 
 <!-- Order Section -->
 <section class="content-grid">
-   
+
     <div class="customer-card">
         <h2>Customer Details</h2>
-        
+
         <div class="customer-info">
             <input type="text" id="name" placeholder="Full Name" required>
             <input type="tel" id="phone" placeholder="Phone Number" required>
@@ -89,18 +89,18 @@
 
     <div class="summary-card">
         <h2>Order Summary</h2>
-        
+
         <!-- Order Items -->
         <div id="orderItems">
             <p class="empty-order">No items added yet</p>
         </div>
-        
+
         <!-- Order Total -->
         <div class="order-total">
             <span>Total:</span>
             <span>R<span id="orderTotal">0.00</span></span>
         </div>
-        
+
         <button onclick="clearOrder()" class="clear-btn">
             <i class="fa-solid fa-trash-can"></i> Clear Order
         </button>

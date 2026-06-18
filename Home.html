@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Tasty Bites Restaurant - About</title>
+    <title>Tasty Bites Restaurant</title>
     <link rel="stylesheet" href="FastFood.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -24,21 +24,12 @@
     </button>
 </header>
 
-<section class="about">
-    <h1>About Us</h1>
-    <p>Welcome to <strong>Tasty Bites Restaurant</strong>, where great food and excellent service come together. We are passionate about serving delicious meals made from fresh, high-quality ingredients.</p>
-    <p>Since our establishment, our mission has been to provide a warm, friendly environment where families, friends, and colleagues can enjoy unforgettable dining experiences.</p>
-    <p>Our menu offers a variety of dishes, from traditional favorites to modern specialties, all prepared with care by our experienced chefs.</p>
-    <h2>Our Mission</h2>
-    <p>To provide exceptional food, outstanding service, and a memorable dining experience for every customer.</p>
-    <h2>Why Choose Us?</h2>
-    <ul>
-        <li>Fresh and quality ingredients</li>
-        <li>Friendly and professional staff</li>
-        <li>Affordable prices</li>
-        <li>Clean and comfortable environment</li>
-        <li>Fast and reliable service</li>
-    </ul>
+<section class="hero">
+    <div class="hero-text">
+        <h2>Good Food</h2>
+        <h1>GOOD MOOD</h1>
+        <p>Welcome to Tasty Bites Restaurant. We serve delicious meals prepared with fresh ingredients.</p>
+    </div>
 </section>
 
 <section class="features">
@@ -59,7 +50,65 @@
     </div>
 </section>
 
-<!-- UNIFIED FOOTER -->
+<section class="stats">
+    <div class="stat-box">
+        <h2>10K+</h2>
+        <p>Happy Customers</p>
+    </div>
+    <div class="stat-box">
+        <h2>500+</h2>
+        <p>Dishes Served Daily</p>
+    </div>
+    <div class="stat-box">
+        <h2>5★</h2>
+        <p>Customer Rating</p>
+    </div>
+</section>
+
+<!-- Reviews Section -->
+<section class="reviews">
+    <h2>Rate Your Experience</h2>
+    <div class="average-rating" id="averageRating">
+        <div class="stars-display">
+            <span class="star-empty">☆☆☆☆☆</span>
+            <span class="average-score">0.0</span>
+        </div>
+        <span class="review-count">(0 reviews)</span>
+    </div>
+
+    <form id="reviewForm">
+        <div class="form-group">
+            <label for="customerName">Your Name</label>
+            <input type="text" id="customerName" placeholder="e.g., Tumelo" required>
+        </div>
+        <div class="form-group">
+            <label>Your Rating</label>
+            <div class="star-rating">
+                <i class="fa-regular fa-star" data-value="1"></i>
+                <i class="fa-regular fa-star" data-value="2"></i>
+                <i class="fa-regular fa-star" data-value="3"></i>
+                <i class="fa-regular fa-star" data-value="4"></i>
+                <i class="fa-regular fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" id="ratingValue" value="0" required>
+            <span class="rating-text" id="ratingText">Select a rating</span>
+        </div>
+        <div class="form-group">
+            <label for="reviewText">Your Review</label>
+            <textarea id="reviewText" placeholder="Share your dining experience..." rows="4" maxlength="500" required></textarea>
+            <div class="char-counter"><span id="charCount">0</span> / 500 characters</div>
+        </div>
+        <button type="submit" id="submitBtn"><i class="fa-regular fa-paper-plane"></i> Submit Review</button>
+    </form>
+
+    <div id="successMessage" class="hidden">
+        <i class="fa-regular fa-circle-check"></i>
+        <p>Thank you for your review! </p>
+    </div>
+    <div id="reviewsContainer"></div>
+</section>
+
+
 <footer>
     <div class="footer-container">
         <div class="footer-section">
