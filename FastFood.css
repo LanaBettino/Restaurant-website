@@ -75,7 +75,7 @@ nav a:hover {
 /* === HERO === */
 .hero {
     min-height: 50vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('Burger.WEBP');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('burger.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
