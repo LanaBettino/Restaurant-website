@@ -84,10 +84,10 @@ nav a:hover {
     animation: slideShow 18s infinite;
 }
 @keyframes slideShow {
-    0% { background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)), url('Burger.WEBP'); }
-    33% { background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)), url('Chicken.WEBP'); }
+    0% { background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)), url('burger.jpg'); }
+    33% { background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)), url('chicken.jpg'); }
     66% { background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)), url('pizza.jpg'); }
-    100% { background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)), url('pie.WEBP'); }
+    100% { background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)), url('pie.jpg'); }
 }
 .hero-text {
     max-width: 700px;

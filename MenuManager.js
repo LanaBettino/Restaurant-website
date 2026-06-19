@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Menu Data
     const menuData = {
         burgers: [
-            { name: "Classic Beef Burger", desc: "Grilled beef patty with lettuce, tomato, and special sauce", price: 85, image: "Burger.WEBP" },
-            { name: "Cheese Burger", desc: "Classic beef with melted cheddar cheese", price: 95, image: "Burger.WEBP" },
-            { name: "Bacon Burger", desc: "Beef patty topped with crispy bacon and BBQ sauce", price: 105, image: "Burger.WEBP" },
-            { name: "Chicken Burger", desc: "Grilled chicken breast with mayo and fresh veggies", price: 90, image: "Chicken.WEBP" },
-            { name: "Veggie Burger", desc: "Plant-based patty with avocado and roasted peppers", price: 80, image: "Burger.WEBP" }
+            { name: "Classic Beef Burger", desc: "Grilled beef patty with lettuce, tomato, and special sauce", price: 85, image: "burger.jpg" },
+            { name: "Cheese Burger", desc: "Classic beef with melted cheddar cheese", price: 95, image: "burger.jpg" },
+            { name: "Bacon Burger", desc: "Beef patty topped with crispy bacon and BBQ sauce", price: 105, image: "burger.jpg" },
+            { name: "Chicken Burger", desc: "Grilled chicken breast with mayo and fresh veggies", price: 90, image: "burger.jpg" },
+            { name: "Veggie Burger", desc: "Plant-based patty with avocado and roasted peppers", price: 80, image: "burger.jpg" }
         ],
         pizzas: [
             { name: "Margherita Pizza", desc: "Classic tomato, mozzarella, and fresh basil", price: 120, image: "pizza.jpg" },
@@ -16,23 +16,23 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: "Veggie Supreme", desc: "Bell peppers, mushrooms, olives, and spinach", price: 130, image: "pizza.jpg" }
         ],
         chicken: [
-            { name: "Grilled Chicken & Chips", desc: "Juicy grilled chicken with golden fries", price: 99, image: "Chicken.WEBP" },
-            { name: "Fried Chicken (6 pcs)", desc: "Crispy fried chicken with dipping sauce", price: 110, image: "Chicken.WEBP" },
-            { name: "Chicken Wings (10 pcs)", desc: "Spicy or mild wings with blue cheese dip", price: 95, image: "Chicken.WEBP" },
-            { name: "Chicken Wrap", desc: "Grilled chicken, lettuce, and garlic sauce in a tortilla", price: 75, image: "Chicken.WEBP" }
+            { name: "Grilled Chicken & Chips", desc: "Juicy grilled chicken with golden fries", price: 99, image: "chicken.jpg" },
+            { name: "Fried Chicken (6 pcs)", desc: "Crispy fried chicken with dipping sauce", price: 110, image: "chicken.jpg" },
+            { name: "Chicken Wings (10 pcs)", desc: "Spicy or mild wings with blue cheese dip", price: 95, image: "chicken.jpg" },
+            { name: "Chicken Wrap", desc: "Grilled chicken, lettuce, and garlic sauce in a tortilla", price: 75, image: "chicken.jpg" }
         ],
         pies: [
-            { name: "Steak & Ale Pie", desc: "Tender beef in rich ale gravy", price: 65, image: "pie.WEBP" },
-            { name: "Chicken & Mushroom Pie", desc: "Creamy chicken with mushrooms", price: 60, image: "pie.WEBP" },
-            { name: "Lamb & Rosemary Pie", desc: "Slow-cooked lamb with fresh rosemary", price: 70, image: "pie.WEBP" },
-            { name: "Vegetable Pie", desc: "Seasonal vegetables in a savory sauce", price: 55, image: "pie.WEBP" }
+            { name: "Steak & Ale Pie", desc: "Tender beef in rich ale gravy", price: 65, image: "pie.jpg" },
+            { name: "Chicken & Mushroom Pie", desc: "Creamy chicken with mushrooms", price: 60, image: "pie.jpg" },
+            { name: "Lamb & Rosemary Pie", desc: "Slow-cooked lamb with fresh rosemary", price: 70, image: "pie.jpg" },
+            { name: "Vegetable Pie", desc: "Seasonal vegetables in a savory sauce", price: 55, image: "pie.jpg" }
         ],
         drinks: [
-            { name: "Coca-Cola", desc: "Classic cola (can)", price: 25, image: "Burger.WEBP" },
-            { name: "Sprite", desc: "Lemon-lime soda (can)", price: 25, image: "Burger.WEBP" },
-            { name: "Fruit Juice", desc: "Fresh orange or apple juice", price: 35, image: "Burger.WEBP" },
-            { name: "Milkshake", desc: "Chocolate, vanilla, or strawberry", price: 45, image: "Burger.WEBP" },
-            { name: "Coffee", desc: "Freshly brewed hot coffee", price: 30, image: "Burger.WEBP" }
+            { name: "Coca-Cola", desc: "Classic cola (can)", price: 25, image: "cola.jpeg" },
+            { name: "Sprite", desc: "Lemon-lime soda (can)", price: 25, image: "cola.jpeg" },
+            { name: "Fruit Juice", desc: "Fresh orange or apple juice", price: 35, image: "cola.jpeg" },
+            { name: "Milkshake", desc: "Chocolate, vanilla, or strawberry", price: 45, image: "cola.jpeg" },
+            { name: "Coffee", desc: "Freshly brewed hot coffee", price: 30, image: "cola.jpeg" }
         ]
     };
 
@@ -75,8 +75,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Apply search filter
         if (searchTerm) {
             const term = searchTerm.toLowerCase();
-            items = items.filter(item => 
-                item.name.toLowerCase().includes(term) || 
+            items = items.filter(item =>
+                item.name.toLowerCase().includes(term) ||
                 item.desc.toLowerCase().includes(term)
             );
         }
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
             html += `
                 <div class="order-item">
                     <span>${item.name} (${item.qty})</span>
-                    <span>R${itemTotal.toFixed(2)} 
+                    <span>R${itemTotal.toFixed(2)}
                         <button class="remove-item" onclick="removeFromOrder(${index})">×</button>
                     </span>
                 </div>
@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        let orderSummary = cart.map(item => 
+        let orderSummary = cart.map(item =>
             `${item.name} x${item.qty} - R${(item.price * item.qty).toFixed(2)}`
         ).join('%0A');
 

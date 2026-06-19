@@ -89,7 +89,7 @@ function sendOrder() {
     }
 
     // Build order summary
-    let orderSummary = cart.map(item => 
+    let orderSummary = cart.map(item =>
         `${item.name} x${item.qty} - R${(item.price * item.qty).toFixed(2)}`
     ).join('%0A');
 
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // === Hero Image Slideshow ===
-const heroImages = ["Burger.WEBP", "pizza.jpg", "Chicken.WEBP", "pie.WEBP"];
+const heroImages = ["burger.jpg","pizza.jpg","chicken.jpg","pie.jpg","cola.jpeg"];
 let current = 0;
 setInterval(function() {
     current++;
